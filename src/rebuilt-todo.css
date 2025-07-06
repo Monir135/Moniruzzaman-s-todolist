@@ -29,15 +29,20 @@ h2 {
     align-items: center;
 
 }
+
 @media (max-width: 400px) {
   .three-input-grid,
   .input-container-grid {
-    grid-template-columns: 170px 120px 70px;
-    column-gap: 5px;
+    grid-template-columns: 170px 120px 80px;
+    column-gap: 10px;
     row-gap: 10px;
     align-items: center;
   }
+  .html-button {
+    margin-left: 1px;
+  }
 }
+
 
 
 .three-input-grid {
