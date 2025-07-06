@@ -34,12 +34,12 @@ h2 {
   .three-input-grid,
   .input-container-grid {
     grid-template-columns: 170px 100px 80px;
-    column-gap: 20px;
+    column-gap: 10px;
     row-gap: 10px;
     align-items: center;
   }
-  .html-button {
-    margin-left: 1px;
+  .css-todo-input{
+    margin-right: 10px;
   }
 }
 
@@ -68,7 +68,8 @@ h2 {
     cursor: pointer;
 }
 
-.css-todo-input {
+.css-todo-input,
+.todo-inpu {
     padding: 6px;
     font-size: 15px;
 }
