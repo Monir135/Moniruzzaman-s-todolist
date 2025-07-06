@@ -29,6 +29,16 @@ h2 {
     align-items: center;
 
 }
+@media (max-width: 400px) {
+  .three-input-grid,
+  .input-container-grid {
+    grid-template-columns:180px 130px 80;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+  }
+}
+
 
 .three-input-grid {
     margin-bottom: 10px;
