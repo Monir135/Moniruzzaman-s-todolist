@@ -32,8 +32,8 @@ h2 {
 @media (max-width: 400px) {
   .three-input-grid,
   .input-container-grid {
-    grid-template-columns:2fr 1.5fr 1fr;
-    column-gap: 7px;
+    grid-template-columns: 170px 120px 70px;
+    column-gap: 5px;
     row-gap: 10px;
     align-items: center;
   }
