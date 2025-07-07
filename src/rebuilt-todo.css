@@ -24,7 +24,7 @@ h2 {
 .three-input-grid {
     display: grid;
     grid-template-columns: 200px 150px 100px;
-    column-gap: 13px;
+    column-gap: 15px;
     row-gap: 10px;
     align-items: center;
 
