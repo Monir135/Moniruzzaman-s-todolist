@@ -10,7 +10,7 @@
     <meta name="author" content="Moniruzzaman">
     <meta property="og:title" content="Moniruzzaman's Todo List App">
     <meta property="og:description" content="Try Monir's Todo List">
-    <meta property="og:image" content="https://i.postimg.cc/CK7qwSj4/Untitled-1.png">
+    <meta property="og:image" content="https://i.postimg.cc/Kz8yq9xD/Untitled-5.">
     <meta property="og:url" content="https://moniruzzaman-s-todolist.vercel.app/">
     <link rel="stylesheet" href="rebuilt-todo.css">
 </head>
@@ -19,8 +19,17 @@
 
     <h2>Try Monir's Todo List</h2>
     <div class="three-input-grid">
-        <input placeholder="Insert todolist" class="js-todo-input  todo-input">
-        <input type="date" class="dueDate-input css-todo-input">
+        <input placeholder="Insert todolist" class="js-todo-input  todo-input" onkeydown="
+        if(event.key==='Enter'){
+            todoList();
+        }
+        ">
+        <input type="date" class="dueDate-input css-todo-input" onkeydown="
+        if(event.key==='Enter'){
+            event.preventDefault()
+            todoList();
+        }
+        ">
         <button onclick="
     todoList();
     " class="html-button">Add</button>

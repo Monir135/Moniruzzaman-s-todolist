@@ -1,32 +1,35 @@
-const arrayList = [{
+/*const arrayList = [{
     inputValue: 'make dinner',
     dateValue: '2025-07-06'
 }, {
     inputValue: 'wash dishes',
     dateValue: '2025-07-07'
-}];
+}];*/
+
+const arrayList = JSON.parse(localStorage.getItem('listItems')) || [];
 let objectInsideArray;
 function displayValue() {
     let storedValue = '';
     for (let i = 0; i < arrayList.length; i++) {
         objectInsideArray = arrayList[i];
         const { inputValue, dateValue } = objectInsideArray;
-        const html = `<div>${inputValue}</div>
-        <div> ${dateValue}</div>
+        const html = `<div class="inputvalue-div-style" >${inputValue}</div>
+        <div class="dateValue-div-style" > ${dateValue}</div>
     <button onclick="
     arrayList.splice(${i},1)
+    localStorage.setItem('listItems', JSON.stringify(arrayList));
     displayValue();
     " class="css-button"
-    
     >Delete</button>
     `;
         storedValue = storedValue + html;
+
 
     }
     const divElement = document.querySelector
         ('.js-input-container');
     divElement.innerHTML = storedValue;
-    console.log(storedValue)
+
 
 }
 displayValue();
@@ -39,7 +42,7 @@ function todoList() {
         inputValue,
         dateValue
     });
-    console.log(arrayList)
+    localStorage.setItem('listItems', JSON.stringify(arrayList));
     inputElement.value = '';
     displayValue();
 
