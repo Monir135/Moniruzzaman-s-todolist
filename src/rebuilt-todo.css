@@ -49,6 +49,17 @@ h2 {
 .dateValue-div-style:hover {
   background-color: #e9f3ff; 
 }
+.arrow-style {
+    color: #28a745; /* Soft green */
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 6px;
+}
+
+
+.arrow-style:hover {
+    color: #004c9e; /* Slightly darker on hover */
+}
 
 
 .three-input-grid {

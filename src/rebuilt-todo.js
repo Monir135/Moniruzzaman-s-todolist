@@ -13,7 +13,7 @@ function displayValue() {
     for (let i = 0; i < arrayList.length; i++) {
         objectInsideArray = arrayList[i];
         const { inputValue, dateValue } = objectInsideArray;
-        const html = `<div class="inputvalue-div-style" >${inputValue}</div>
+        const html = `<div class="inputvalue-div-style" ><span class="arrow-style">&rarrhk;</span>${inputValue}</div>
         <div class="dateValue-div-style" > ${dateValue}</div>
     <button onclick="
     arrayList.splice(${i},1)
