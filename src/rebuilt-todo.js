@@ -5,8 +5,15 @@
     inputValue: 'wash dishes',
     dateValue: '2025-07-07'
 }];*/
-
-const arrayList = JSON.parse(localStorage.getItem('listItems')) || [];
+const defaultValue = [{
+    inputValue: 'Local Storage was Added',
+    dateValue: '2025-07-15'
+}, {
+    inputValue: 'More CSS was Added',
+    dateValue: '2025-07-15'
+}];
+const arrayList = JSON.parse(localStorage.getItem('listItems')) || defaultValue;
+    
 let objectInsideArray;
 function displayValue() {
     let storedValue = '';
@@ -23,14 +30,10 @@ function displayValue() {
     >Delete</button>
     `;
         storedValue = storedValue + html;
-
-
     }
     const divElement = document.querySelector
         ('.js-input-container');
     divElement.innerHTML = storedValue;
-
-
 }
 displayValue();
 function todoList() {
@@ -43,6 +46,7 @@ function todoList() {
         dateValue
     });
     localStorage.setItem('listItems', JSON.stringify(arrayList));
+    
     inputElement.value = '';
     displayValue();
 
