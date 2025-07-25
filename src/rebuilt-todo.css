@@ -1,10 +1,16 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
+      box-sizing: border-box;
+
 }
 
 body {
     background-color: #ffffff;
     color: #000;
+}
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -23,12 +29,18 @@ h2 {
 .input-container-grid,
 .three-input-grid {
     display: grid;
-    grid-template-columns: 200px 150px 100px;
+    grid-template-columns: 2fr 2fr 1fr;
     column-gap: 15px;
     row-gap: 10px;
     align-items: center;
 
 }
+.three-input-grid > input,
+.three-input-grid > button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
 
 .inputvalue-div-style,
 .dateValue-div-style {
@@ -75,6 +87,8 @@ h2 {
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 15px;
+    min-width:70px ;
+    max-width: 125px;
 }
 
 .html-button {
@@ -83,12 +97,18 @@ h2 {
     color: white;
     font-size: 15px;
     cursor: pointer;
+     padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    min-width: 70px;
+    max-width: 125px;
 }
 
 .css-todo-input,
 .todo-input {
     padding: 6px;
     font-size: 15px;
+    min-width: 0;
 }
 
 .credit-text {
